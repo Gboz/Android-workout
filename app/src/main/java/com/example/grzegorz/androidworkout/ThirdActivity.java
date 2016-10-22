@@ -1,7 +1,9 @@
 package com.example.grzegorz.androidworkout;
 
+import android.graphics.drawable.AnimationDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ImageView;
 
 public class ThirdActivity extends AppCompatActivity {
 
@@ -9,5 +11,13 @@ public class ThirdActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_third);
+
+        ImageView imageView = (ImageView) findViewById(R.id.animacja);
+        imageView.setBackgroundResource(R.drawable.animation);
+
+        AnimationDrawable animationDrawable = (AnimationDrawable) imageView.getBackground();
+        animationDrawable.start();
     }
+
+
 }

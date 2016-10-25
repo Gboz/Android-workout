@@ -17,9 +17,7 @@ public class MainActivity extends AppCompatActivity {
     public void LoadSecondActivity(View view){
 //        startActivity(new Intent(MainActivity.this, SecondActivity.class));
         Intent intent = new Intent(MainActivity.this, SecondActivity.class);
-        EditText editText = (EditText) findViewById(R.id.editText1);
-        String message = editText.getText().toString();
-        intent.putExtra("textmessage", message);
+
         startActivity(intent);
     }
 

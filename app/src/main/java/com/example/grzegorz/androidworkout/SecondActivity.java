@@ -41,8 +41,9 @@ public class SecondActivity extends AppCompatActivity {
                         startActivity(introductionIntent);
                         break;
                     case 1:
-                        Intent dpuIntent = new Intent(SecondActivity.this, MainActivity.class);
+                        Intent dpuIntent = new Intent(SecondActivity.this, UseCaseDiagram.class);
                         startActivity(dpuIntent);
+                        break;
                     default:
                         break;
                 }

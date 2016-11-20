@@ -16,4 +16,13 @@
         android:text="@string/secondactivity"
         android:id="@+id/showMessage"/>
 
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/showMessage"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="11dp"
+        android:id="@+id/list_of_lessons"/>
+
 </RelativeLayout>

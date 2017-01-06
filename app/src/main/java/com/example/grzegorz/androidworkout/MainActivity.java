@@ -17,13 +17,11 @@ public class MainActivity extends AppCompatActivity {
     public void LoadSecondActivity(View view){
 //        startActivity(new Intent(MainActivity.this, SecondActivity.class));
         Intent intent = new Intent(MainActivity.this, SecondActivity.class);
-
         startActivity(intent);
     }
 
     public void LoadThirdActivity(View view){
         Intent intent = new Intent(MainActivity.this, ThirdActivity.class);
-
         startActivity(intent);
     }
 }

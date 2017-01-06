@@ -48,5 +48,19 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
+    <Button
+        android:text="Kosci"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/stopAnimate"
+        android:layout_alignLeft="@+id/stopAnimate"
+        android:layout_alignStart="@+id/stopAnimate"
+        android:layout_marginTop="13dp"
+        android:id="@+id/bonesGame"
+        android:onClick="LoadBonesGameActivity"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
 
 </RelativeLayout>

@@ -1,8 +1,10 @@
 package com.example.grzegorz.androidworkout;
 
+import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 
 public class ThirdActivity extends AppCompatActivity {
@@ -19,5 +21,9 @@ public class ThirdActivity extends AppCompatActivity {
         animationDrawable.start();
     }
 
+    public void LoadBonesGameActivity(View view){
+        Intent intent = new Intent(ThirdActivity.this, BonesGameActivity.class);
+        startActivity(intent);
+    }
 
 }

@@ -18,60 +18,64 @@
 
 
         <Button
-            android:text=""
+            android:text="Rzut"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:id="@+id/playerButton" />
+            android:id="@+id/throwBones" />
 
-        <CheckBox
-            android:text="___"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/cB1"
+        <Button
+            android:text="Button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_alignParentTop="true"
-            android:layout_toRightOf="@+id/playerButton"
-            android:layout_toEndOf="@+id/playerButton"
-            android:layout_marginLeft="67dp"
-            android:layout_marginStart="67dp" />
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/button1" />
 
-        <CheckBox
-            android:text="___"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/cB2"
-            android:layout_marginTop="27dp"
-            android:layout_below="@+id/cB1"
-            android:layout_alignLeft="@+id/cB1"
-            android:layout_alignStart="@+id/cB1" />
-
-        <CheckBox
-            android:text="___"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/cB3"
-            android:layout_alignBaseline="@+id/playerButton"
-            android:layout_alignBottom="@+id/playerButton"
-            android:layout_alignLeft="@+id/cB2"
-            android:layout_alignStart="@+id/cB2" />
-
-        <CheckBox
-            android:text="___"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/cB4"
-            android:layout_below="@+id/cB3"
-            android:layout_alignLeft="@+id/cB3"
-            android:layout_alignStart="@+id/cB3"
-            android:layout_marginTop="27dp" />
-
-        <CheckBox
-            android:text="___"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/cB5"
+        <Button
+            android:text="Button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/button5"
             android:layout_alignParentBottom="true"
-            android:layout_alignLeft="@+id/cB4"
-            android:layout_alignStart="@+id/cB4" />
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <Button
+            android:text="Button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/button2"
+            android:layout_below="@+id/button1"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <Button
+            android:text="Button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/button4"
+            android:layout_above="@+id/button5"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <Button
+            android:text="Button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/button3"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <Button
+            android:text="Pass"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/pass"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/throwBones"
+            android:layout_toEndOf="@+id/throwBones" />
 
     </RelativeLayout>
 
@@ -80,12 +84,21 @@
         android:layout_height="match_parent"
         android:layout_weight="0.5">
 
-        <ListView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+        <TextView
+            android:id="@+id/debug1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:id="@+id/list_of_scores"/>
+            android:layout_alignParentStart="true" />
 
+        <TextView
+            android:id="@+id/debug2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/debug1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
     </RelativeLayout>
 </LinearLayout>

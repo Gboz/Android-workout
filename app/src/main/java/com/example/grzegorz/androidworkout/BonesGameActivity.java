@@ -1,6 +1,8 @@
 package com.example.grzegorz.androidworkout;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -26,7 +28,7 @@ public class BonesGameActivity extends AppCompatActivity {
         button4 = (Button) findViewById(R.id.button4);
         button5 = (Button) findViewById(R.id.button5);
         throwBones = (Button) findViewById(R.id.throwBones);
-        pass = (Button) findViewById(R.id.pass);
+        pass = (Button) findViewById(R.id.pass_button);
         debug1 = (TextView) findViewById(R.id.debug1);
         debug2 = (TextView) findViewById(R.id.debug2);
 
@@ -159,6 +161,26 @@ public class BonesGameActivity extends AppCompatActivity {
         sum += a + b + c + d + e;
 
         return sum;
+    }
+
+    public void passWindow(View arg0) {
+        final AlertDialog.Builder builder = new AlertDialog.Builder(BonesGameActivity.this);
+        builder.setMessage("Are you sure to pass?");
+        builder.setCancelable(true);
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+//                endGame();
+            }
+        });
+        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
     }
 
 }

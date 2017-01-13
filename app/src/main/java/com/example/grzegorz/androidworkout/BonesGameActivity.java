@@ -13,9 +13,13 @@ import java.util.ArrayList;
 public class BonesGameActivity extends AppCompatActivity {
 
     Button button1, button2, button3, button4, button5;
-    Button throwBones, pass;
+    Button button11, button22, button33, button44, button55;
+    Button throwBones1, pass;
+    Button throwBones2, pass2;
     ArrayList<Integer> score = new ArrayList<>();
+    ArrayList<Integer> score2 = new ArrayList<>();
     TextView debug1, debug2;
+    TextView debug11, debug22;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,10 +31,20 @@ public class BonesGameActivity extends AppCompatActivity {
         button3 = (Button) findViewById(R.id.button3);
         button4 = (Button) findViewById(R.id.button4);
         button5 = (Button) findViewById(R.id.button5);
-        throwBones = (Button) findViewById(R.id.throwBones1);
+        throwBones1 = (Button) findViewById(R.id.throwBones1);
         pass = (Button) findViewById(R.id.pass_button1);
         debug1 = (TextView) findViewById(R.id.debug1);
         debug2 = (TextView) findViewById(R.id.debug2);
+
+        button11 = (Button) findViewById(R.id.button11);
+        button22 = (Button) findViewById(R.id.button22);
+        button33 = (Button) findViewById(R.id.button33);
+        button44 = (Button) findViewById(R.id.button44);
+        button55 = (Button) findViewById(R.id.button55);
+        throwBones2 = (Button) findViewById(R.id.throwBones2);
+        pass2 = (Button) findViewById(R.id.pass_button2);
+        debug11 = (TextView) findViewById(R.id.debug11);
+        debug22 = (TextView) findViewById(R.id.debug22);
 
         button1.setEnabled(false);
         button2.setEnabled(false);
@@ -39,7 +53,14 @@ public class BonesGameActivity extends AppCompatActivity {
         button5.setEnabled(false);
         pass.setEnabled(false);
 
-        throwBones.setOnClickListener(new View.OnClickListener() {
+        button11.setEnabled(false);
+        button22.setEnabled(false);
+        button33.setEnabled(false);
+        button44.setEnabled(false);
+        button55.setEnabled(false);
+        pass2.setEnabled(false);
+
+        throwBones1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 button1.setText(randomThrowRange(1, 6));
@@ -63,7 +84,7 @@ public class BonesGameActivity extends AppCompatActivity {
                 debug1.setText(score.toString());
                 debug2.setText("" + sumAllElements(score));
 
-                throwBones.setEnabled(false);
+                throwBones1.setEnabled(false);
             }
         });
 

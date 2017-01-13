@@ -62,7 +62,6 @@
             android:id="@+id/debug1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
             android:layout_above="@+id/pass_button1"
             android:layout_alignLeft="@+id/pass_button1"/>
 
@@ -157,6 +156,19 @@
             android:layout_below="@+id/button44"
             android:layout_alignLeft="@+id/button44"/>
 
+        <TextView
+            android:id="@+id/debug11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/throwBones2"
+            android:layout_alignLeft="@+id/throwBones2"/>
+
+        <TextView
+            android:id="@+id/debug22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/pass_button2"
+            android:layout_alignLeft="@+id/pass_button2"/>
 
     </RelativeLayout>
 </LinearLayout>

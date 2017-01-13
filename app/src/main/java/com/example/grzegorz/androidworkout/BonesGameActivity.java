@@ -27,8 +27,8 @@ public class BonesGameActivity extends AppCompatActivity {
         button3 = (Button) findViewById(R.id.button3);
         button4 = (Button) findViewById(R.id.button4);
         button5 = (Button) findViewById(R.id.button5);
-        throwBones = (Button) findViewById(R.id.throwBones);
-        pass = (Button) findViewById(R.id.pass_button);
+        throwBones = (Button) findViewById(R.id.throwBones1);
+        pass = (Button) findViewById(R.id.pass_button1);
         debug1 = (TextView) findViewById(R.id.debug1);
         debug2 = (TextView) findViewById(R.id.debug2);
 

@@ -30,8 +30,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button3"
-            android:layout_toRightOf="@+id/throwBones"
-            android:layout_alignBottom="@+id/throwBones"/>
+            android:layout_toRightOf="@+id/throwBones1"
+            android:layout_alignBottom="@+id/throwBones1"/>
 
         <Button
             android:text="4"
@@ -53,27 +53,25 @@
             android:text="Pass"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/pass_button"
+            android:id="@+id/pass_button1"
             android:onClick="passWindow"
-            android:layout_toLeftOf="@+id/throwBones"
-            android:layout_alignBottom="@+id/throwBones"/>
+            android:layout_toLeftOf="@+id/throwBones1"
+            android:layout_alignBottom="@+id/throwBones1"/>
 
         <TextView
             android:id="@+id/debug1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginLeft="24dp"
-            android:layout_marginStart="24dp" />
+            android:layout_above="@+id/pass_button1"
+            android:layout_alignLeft="@+id/pass_button1"/>
 
         <TextView
             android:id="@+id/debug2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true" />
+            android:layout_above="@+id/throwBones1"
+            android:layout_alignLeft="@+id/throwBones1"/>
 
         <Button
             android:text="1"
@@ -87,8 +85,15 @@
             android:text="Rzut"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/throwBones"
+            android:id="@+id/throwBones1"
             android:layout_centerInParent="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/throwBones1"
+            android:layout_alignLeft="@+id/throwBones1"
+            android:textSize="30dp"/>
 
     </RelativeLayout>
 
@@ -96,6 +101,62 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="0.5">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Rzut"
+            android:id="@+id/throwBones2" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/throwBones2"
+            android:layout_alignBottom="@+id/throwBones2"
+            android:text="Pass"
+            android:id="@+id/pass_button2" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button33"
+            android:text="33"
+            android:layout_toLeftOf="@id/throwBones2"
+            android:layout_alignBottom="@id/throwBones2" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button22"
+            android:layout_above="@+id/button33"
+            android:layout_alignLeft="@+id/button33"
+            android:text="22" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button11"
+            android:text="11"
+            android:layout_above="@+id/button22"
+            android:layout_alignLeft="@+id/button22"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button44"
+            android:text="44"
+            android:layout_below="@+id/button33"
+            android:layout_alignLeft="@+id/button33"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button55"
+            android:text="55"
+            android:layout_below="@+id/button44"
+            android:layout_alignLeft="@+id/button44"/>
+
 
     </RelativeLayout>
 </LinearLayout>

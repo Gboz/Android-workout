@@ -6,9 +6,11 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class BonesGameActivity extends AppCompatActivity {
 
@@ -60,6 +62,7 @@ public class BonesGameActivity extends AppCompatActivity {
         button55.setEnabled(false);
         pass2.setEnabled(false);
 
+        //first player
         throwBones1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -153,6 +156,99 @@ public class BonesGameActivity extends AppCompatActivity {
             }
         });
 
+        //second player
+        throwBones2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                button11.setText(randomThrowRange(1, 6));
+                score2.add(stringToInteger((String) button11.getText()));
+                button22.setText(randomThrowRange(1, 6));
+                score2.add(stringToInteger((String) button22.getText()));
+                button33.setText(randomThrowRange(1, 6));
+                score2.add(stringToInteger((String) button33.getText()));
+                button44.setText(randomThrowRange(1, 6));
+                score2.add(stringToInteger((String) button44.getText()));
+                button55.setText(randomThrowRange(1, 6));
+                score2.add(stringToInteger((String) button55.getText()));
+
+                button11.setEnabled(true);
+                button22.setEnabled(true);
+                button33.setEnabled(true);
+                button44.setEnabled(true);
+                button55.setEnabled(true);
+                pass2.setEnabled(true);
+
+                debug11.setText(score2.toString());
+                debug22.setText("" + sumAllElements(score2));
+
+                throwBones2.setEnabled(false);
+            }
+        });
+
+        button11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int b = Integer.parseInt(randomThrowRange(1, 6));
+                score2.set(0, b);
+                String number = String.valueOf(b);
+                button11.setText(number);
+                debug11.setText(score2.toString());
+                button11.setEnabled(false);
+                debug22.setText("" + sumAllElements(score2));
+            }
+        });
+
+        button22.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int b = Integer.parseInt(randomThrowRange(1, 6));
+                score2.set(1, b);
+                String number = String.valueOf(b);
+                button22.setText(number);
+                debug11.setText(score2.toString());
+                button22.setEnabled(false);
+                debug22.setText("" + sumAllElements(score2));
+            }
+        });
+
+        button33.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int b = Integer.parseInt(randomThrowRange(1, 6));
+                score2.set(2, b);
+                String number = String.valueOf(b);
+                button33.setText(number);
+                debug11.setText(score2.toString());
+                button33.setEnabled(false);
+                debug22.setText("" + sumAllElements(score2));
+            }
+        });
+
+        button44.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int b = Integer.parseInt(randomThrowRange(1, 6));
+                score2.set(3, b);
+                String number = String.valueOf(b);
+                button44.setText(number);
+                debug11.setText(score2.toString());
+                button44.setEnabled(false);
+                debug22.setText("" + sumAllElements(score2));
+            }
+        });
+
+        button55.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int b = Integer.parseInt(randomThrowRange(1, 6));
+                score2.set(4, b);
+                String number = String.valueOf(b);
+                button55.setText(number);
+                debug11.setText(score2.toString());
+                button55.setEnabled(false);
+                debug22.setText("" + sumAllElements(score2));
+            }
+        });
     }
 
     public String randomThrowRange(int min, int max) {
@@ -203,5 +299,10 @@ public class BonesGameActivity extends AppCompatActivity {
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
     }
+
+//    public boolean randomPlayer() {
+//        Random randomBoolean = new Random();
+//        return randomBoolean.nextBoolean();
+//    }
 
 }

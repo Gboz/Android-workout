@@ -22,6 +22,7 @@ public class BonesGameActivity extends AppCompatActivity {
     ArrayList<Integer> score2 = new ArrayList<>();
     TextView debug1, debug2;
     TextView debug11, debug22;
+    TextView scoreFirstPlayer, scoreSecondPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +38,7 @@ public class BonesGameActivity extends AppCompatActivity {
         pass = (Button) findViewById(R.id.pass_button1);
         debug1 = (TextView) findViewById(R.id.debug1);
         debug2 = (TextView) findViewById(R.id.debug2);
+        scoreFirstPlayer = (TextView) findViewById(R.id.scoreFirstPlayer);
 
         button11 = (Button) findViewById(R.id.button11);
         button22 = (Button) findViewById(R.id.button22);
@@ -47,6 +49,7 @@ public class BonesGameActivity extends AppCompatActivity {
         pass2 = (Button) findViewById(R.id.pass_button2);
         debug11 = (TextView) findViewById(R.id.debug11);
         debug22 = (TextView) findViewById(R.id.debug22);
+        scoreSecondPlayer = (TextView) findViewById(R.id.scoreSecondPlayer);
 
         button1.setEnabled(false);
         button2.setEnabled(false);
@@ -156,6 +159,20 @@ public class BonesGameActivity extends AppCompatActivity {
             }
         });
 
+        pass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                scoreFirstPlayer.setText("" + sumAllElements(score));
+                pass.setEnabled(false);
+                button1.setEnabled(false);
+                button2.setEnabled(false);
+                button3.setEnabled(false);
+                button4.setEnabled(false);
+                button5.setEnabled(false);
+
+            }
+        });
+
         //second player
         throwBones2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -249,6 +266,28 @@ public class BonesGameActivity extends AppCompatActivity {
                 debug22.setText("" + sumAllElements(score2));
             }
         });
+
+        pass2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                scoreSecondPlayer.setText("" + sumAllElements(score2));
+                pass2.setEnabled(false);
+                button11.setEnabled(false);
+                button22.setEnabled(false);
+                button33.setEnabled(false);
+                button44.setEnabled(false);
+                button55.setEnabled(false);
+            }
+        });
+
+//        if (sumAllElements(score) > sumAllElements(score2)) {
+//            scoreFirstPlayer.setText("Wygrałeś " + sumAllElements(score));
+//        } else if (sumAllElements(score) < sumAllElements(score2)) {
+//            scoreSecondPlayer.setText("Wygrałeś " + sumAllElements(score2));
+//        } else {
+//            scoreFirstPlayer.setText("Remis " + sumAllElements(score));
+//            scoreSecondPlayer.setText("Remis " + sumAllElements(score2));
+//        }
     }
 
     public String randomThrowRange(int min, int max) {
@@ -280,25 +319,29 @@ public class BonesGameActivity extends AppCompatActivity {
         return sum;
     }
 
-    public void passWindow(View arg0) {
-        final AlertDialog.Builder builder = new AlertDialog.Builder(BonesGameActivity.this);
-        builder.setMessage("Are you sure to pass?");
-        builder.setCancelable(true);
-        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-//                endGame();
-            }
-        });
-        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.cancel();
-            }
-        });
-        AlertDialog alertDialog = builder.create();
-        alertDialog.show();
-    }
+//Obsługa okna dialogowego
+
+//    public void passWindow(View arg0) {
+//        final AlertDialog.Builder builder = new AlertDialog.Builder(BonesGameActivity.this);
+//        builder.setMessage("Are you sure to pass?");
+//        builder.setCancelable(true);
+//        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+//            @Override
+//            public void onClick(DialogInterface dialog, int which) {
+////                endGame();
+//            }
+//        });
+//        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+//            @Override
+//            public void onClick(DialogInterface dialog, int which) {
+//                dialog.cancel();
+//            }
+//        });
+//        AlertDialog alertDialog = builder.create();
+//        alertDialog.show();
+//    }
+
+//Metoda zwracająca losową wartość boolean
 
 //    public boolean randomPlayer() {
 //        Random randomBoolean = new Random();

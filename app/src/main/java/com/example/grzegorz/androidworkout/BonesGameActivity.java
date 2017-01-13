@@ -13,9 +13,9 @@ import java.util.ArrayList;
 public class BonesGameActivity extends AppCompatActivity {
 
     Button button1, button2, button3, button4, button5;
-    TextView debug1, debug2;
     Button throwBones, pass;
     ArrayList<Integer> score = new ArrayList<>();
+    TextView debug1, debug2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

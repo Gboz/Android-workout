@@ -20,6 +20,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void LoadBonesGameActivity(View view){
+        Intent intent = new Intent(MainActivity.this, BonesGameActivity.class);
+        startActivity(intent);
+    }
+
     public void LoadThirdActivity(View view){
         Intent intent = new Intent(MainActivity.this, ThirdActivity.class);
         startActivity(intent);

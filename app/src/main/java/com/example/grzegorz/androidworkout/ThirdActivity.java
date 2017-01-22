@@ -21,9 +21,4 @@ public class ThirdActivity extends AppCompatActivity {
         animationDrawable.start();
     }
 
-    public void LoadBonesGameActivity(View view){
-        Intent intent = new Intent(ThirdActivity.this, BonesGameActivity.class);
-        startActivity(intent);
-    }
-
 }

@@ -18,7 +18,10 @@
 
 
         <Button
-            android:text="2"
+            android:text="*"
+            android:textColor="#FFFFFF"
+            android:textSize="32sp"
+            android:background="@drawable/buttonshape"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button2"
@@ -26,7 +29,10 @@
             android:layout_alignRight="@+id/button3"/>
 
         <Button
-            android:text="3"
+            android:text="*"
+            android:textColor="#FFFFFF"
+            android:textSize="32sp"
+            android:background="@drawable/buttonshape"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button3"
@@ -34,7 +40,10 @@
             android:layout_alignBottom="@+id/throwBones1"/>
 
         <Button
-            android:text="4"
+            android:text="*"
+            android:textColor="#FFFFFF"
+            android:textSize="32sp"
+            android:background="@drawable/buttonshape"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button4"
@@ -42,15 +51,10 @@
             android:layout_alignRight="@+id/button3"/>
 
         <Button
-            android:text="5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/button5"
-            android:layout_below="@+id/button4"
-            android:layout_alignLeft="@+id/button4" />
-
-        <Button
             android:text="Pass"
+            android:textColor="#FFFFFF"
+            android:textSize="32sp"
+            android:background="@drawable/buttonshape2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/pass_button1"
@@ -73,7 +77,10 @@
             android:layout_alignLeft="@+id/throwBones1"/>
 
         <Button
-            android:text="1"
+            android:text="*"
+            android:textColor="#FFFFFF"
+            android:textSize="32sp"
+            android:background="@drawable/buttonshape"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button1"
@@ -81,6 +88,9 @@
             android:layout_alignRight="@+id/button2"/>
 
         <Button
+            android:textColor="#FFFFFF"
+            android:textSize="32sp"
+            android:background="@drawable/buttonshape2"
             android:text="Rzut"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -88,12 +98,25 @@
             android:layout_centerInParent="true"/>
 
         <TextView
+            android:fontFamily="sans-serif-condensed"
             android:id="@+id/scoreFirstPlayer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/throwBones1"
             android:layout_alignLeft="@+id/throwBones1"
-            android:textSize="30dp"/>
+            android:textSize="50dp"/>
+
+        <Button
+            android:text="*"
+            android:textColor="#FFFFFF"
+            android:textSize="32sp"
+            android:background="@drawable/buttonshape"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button5"
+            android:layout_below="@+id/button4"
+            android:layout_alignLeft="@+id/button4"
+            android:layout_alignStart="@+id/button4" />
 
     </RelativeLayout>
 
@@ -103,6 +126,9 @@
         android:layout_weight="0.5">
 
         <Button
+            android:textColor="#FFFFFF"
+            android:textSize="32sp"
+            android:background="@drawable/buttonshape2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -110,6 +136,9 @@
             android:id="@+id/throwBones2" />
 
         <Button
+            android:textColor="#FFFFFF"
+            android:textSize="32sp"
+            android:background="@drawable/buttonshape2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/throwBones2"
@@ -118,42 +147,57 @@
             android:id="@+id/pass_button2" />
 
         <Button
+            android:textColor="#FFFFFF"
+            android:textSize="32sp"
+            android:background="@drawable/buttonshape"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button33"
-            android:text="33"
+            android:text="*"
             android:layout_toLeftOf="@id/throwBones2"
             android:layout_alignBottom="@id/throwBones2" />
 
         <Button
+            android:textColor="#FFFFFF"
+            android:textSize="32sp"
+            android:background="@drawable/buttonshape"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button22"
             android:layout_above="@+id/button33"
             android:layout_alignLeft="@+id/button33"
-            android:text="22" />
+            android:text="*" />
 
         <Button
+            android:textColor="#FFFFFF"
+            android:textSize="32sp"
+            android:background="@drawable/buttonshape"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button11"
-            android:text="11"
+            android:text="*"
             android:layout_above="@+id/button22"
             android:layout_alignLeft="@+id/button22"/>
 
         <Button
+            android:textColor="#FFFFFF"
+            android:textSize="32sp"
+            android:background="@drawable/buttonshape"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button44"
-            android:text="44"
+            android:text="*"
             android:layout_below="@+id/button33"
             android:layout_alignLeft="@+id/button33"/>
 
         <Button
+            android:textColor="#FFFFFF"
+            android:textSize="32sp"
+            android:background="@drawable/buttonshape"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button55"
-            android:text="55"
+            android:text="*"
             android:layout_below="@+id/button44"
             android:layout_alignLeft="@+id/button44"/>
 
@@ -172,12 +216,13 @@
             android:layout_alignLeft="@+id/pass_button2"/>
 
         <TextView
+            android:fontFamily="sans-serif-condensed"
             android:id="@+id/scoreSecondPlayer"
             android:textSize="50dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/throwBones2"
-            android:layout_alignRight="@+id/throwBones2"/>
+            android:layout_alignRight="@+id/throwBones2" />
 
     </RelativeLayout>
 </LinearLayout>

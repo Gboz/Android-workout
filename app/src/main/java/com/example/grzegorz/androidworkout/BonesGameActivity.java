@@ -1,6 +1,7 @@
 package com.example.grzegorz.androidworkout;
 
 import android.content.DialogInterface;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -91,6 +92,7 @@ public class BonesGameActivity extends AppCompatActivity {
                 debug2.setText("" + sumAllElements(score));
 
                 throwBones1.setEnabled(false);
+                throwBones1.setTextColor(Color.GRAY);
             }
         });
 
@@ -104,6 +106,7 @@ public class BonesGameActivity extends AppCompatActivity {
                 debug1.setText(score.toString());
                 button1.setEnabled(false);
                 debug2.setText("" + sumAllElements(score));
+                button1.setTextColor(Color.GRAY);
             }
         });
 
@@ -117,6 +120,7 @@ public class BonesGameActivity extends AppCompatActivity {
                 debug1.setText(score.toString());
                 button2.setEnabled(false);
                 debug2.setText("" + sumAllElements(score));
+                button2.setTextColor(Color.GRAY);
             }
         });
 
@@ -130,6 +134,7 @@ public class BonesGameActivity extends AppCompatActivity {
                 debug1.setText(score.toString());
                 button3.setEnabled(false);
                 debug2.setText("" + sumAllElements(score));
+                button3.setTextColor(Color.GRAY);
             }
         });
 
@@ -143,6 +148,7 @@ public class BonesGameActivity extends AppCompatActivity {
                 debug1.setText(score.toString());
                 button4.setEnabled(false);
                 debug2.setText("" + sumAllElements(score));
+                button4.setTextColor(Color.GRAY);
             }
         });
 
@@ -156,20 +162,21 @@ public class BonesGameActivity extends AppCompatActivity {
                 debug1.setText(score.toString());
                 button5.setEnabled(false);
                 debug2.setText("" + sumAllElements(score));
+                button5.setTextColor(Color.GRAY);
             }
         });
 
         pass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                scoreFirstPlayer.setText("" + sumAllElements(score));
+//                scoreFirstPlayer.setText("" + sumAllElements(score));
                 pass.setEnabled(false);
                 button1.setEnabled(false);
                 button2.setEnabled(false);
                 button3.setEnabled(false);
                 button4.setEnabled(false);
                 button5.setEnabled(false);
-
+                pass.setTextColor(Color.GRAY);
             }
         });
 
@@ -199,6 +206,7 @@ public class BonesGameActivity extends AppCompatActivity {
                 debug22.setText("" + sumAllElements(score2));
 
                 throwBones2.setEnabled(false);
+                throwBones2.setTextColor(Color.GRAY);
             }
         });
 
@@ -212,6 +220,7 @@ public class BonesGameActivity extends AppCompatActivity {
                 debug11.setText(score2.toString());
                 button11.setEnabled(false);
                 debug22.setText("" + sumAllElements(score2));
+                button11.setTextColor(Color.GRAY);
             }
         });
 
@@ -225,6 +234,7 @@ public class BonesGameActivity extends AppCompatActivity {
                 debug11.setText(score2.toString());
                 button22.setEnabled(false);
                 debug22.setText("" + sumAllElements(score2));
+                button22.setTextColor(Color.GRAY);
             }
         });
 
@@ -238,6 +248,7 @@ public class BonesGameActivity extends AppCompatActivity {
                 debug11.setText(score2.toString());
                 button33.setEnabled(false);
                 debug22.setText("" + sumAllElements(score2));
+                button33.setTextColor(Color.GRAY);
             }
         });
 
@@ -251,6 +262,7 @@ public class BonesGameActivity extends AppCompatActivity {
                 debug11.setText(score2.toString());
                 button44.setEnabled(false);
                 debug22.setText("" + sumAllElements(score2));
+                button44.setTextColor(Color.GRAY);
             }
         });
 
@@ -264,30 +276,33 @@ public class BonesGameActivity extends AppCompatActivity {
                 debug11.setText(score2.toString());
                 button55.setEnabled(false);
                 debug22.setText("" + sumAllElements(score2));
+                button55.setTextColor(Color.GRAY);
             }
         });
 
         pass2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                scoreSecondPlayer.setText("" + sumAllElements(score2));
+//                scoreSecondPlayer.setText("" + sumAllElements(score2));
                 pass2.setEnabled(false);
                 button11.setEnabled(false);
                 button22.setEnabled(false);
                 button33.setEnabled(false);
                 button44.setEnabled(false);
                 button55.setEnabled(false);
+                if (sumAllElements(score) > sumAllElements(score2)) {
+                    scoreFirstPlayer.setText("Win");
+                } else if (sumAllElements(score) < sumAllElements(score2)) {
+                    scoreSecondPlayer.setText("Win");
+                } else {
+                    scoreFirstPlayer.setText("Remis");
+                    scoreSecondPlayer.setText("Remis");
+                }
+                pass2.setTextColor(Color.GRAY);
             }
         });
 
-//        if (sumAllElements(score) > sumAllElements(score2)) {
-//            scoreFirstPlayer.setText("Wygrałeś " + sumAllElements(score));
-//        } else if (sumAllElements(score) < sumAllElements(score2)) {
-//            scoreSecondPlayer.setText("Wygrałeś " + sumAllElements(score2));
-//        } else {
-//            scoreFirstPlayer.setText("Remis " + sumAllElements(score));
-//            scoreSecondPlayer.setText("Remis " + sumAllElements(score2));
-//        }
+
     }
 
     public String randomThrowRange(int min, int max) {

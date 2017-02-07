@@ -1,17 +1,13 @@
 package com.example.grzegorz.androidworkout;
 
-import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.Random;
 
 public class BonesGameActivity extends AppCompatActivity {
 
@@ -169,7 +165,6 @@ public class BonesGameActivity extends AppCompatActivity {
         pass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                scoreFirstPlayer.setText("" + sumAllElements(score));
                 pass.setEnabled(false);
                 button1.setEnabled(false);
                 button2.setEnabled(false);
@@ -283,7 +278,6 @@ public class BonesGameActivity extends AppCompatActivity {
         pass2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                scoreSecondPlayer.setText("" + sumAllElements(score2));
                 pass2.setEnabled(false);
                 button11.setEnabled(false);
                 button22.setEnabled(false);
@@ -301,7 +295,6 @@ public class BonesGameActivity extends AppCompatActivity {
                 pass2.setTextColor(Color.GRAY);
             }
         });
-
 
     }
 
@@ -333,34 +326,5 @@ public class BonesGameActivity extends AppCompatActivity {
 
         return sum;
     }
-
-//Obsługa okna dialogowego
-
-//    public void passWindow(View arg0) {
-//        final AlertDialog.Builder builder = new AlertDialog.Builder(BonesGameActivity.this);
-//        builder.setMessage("Are you sure to pass?");
-//        builder.setCancelable(true);
-//        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-//            @Override
-//            public void onClick(DialogInterface dialog, int which) {
-////                endGame();
-//            }
-//        });
-//        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
-//            @Override
-//            public void onClick(DialogInterface dialog, int which) {
-//                dialog.cancel();
-//            }
-//        });
-//        AlertDialog alertDialog = builder.create();
-//        alertDialog.show();
-//    }
-
-//Metoda zwracająca losową wartość boolean
-
-//    public boolean randomPlayer() {
-//        Random randomBoolean = new Random();
-//        return randomBoolean.nextBoolean();
-//    }
 
 }

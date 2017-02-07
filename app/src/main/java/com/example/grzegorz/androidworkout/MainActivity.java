@@ -14,11 +14,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void LoadSecondActivity(View view){
-//        startActivity(new Intent(MainActivity.this, SecondActivity.class));
-        Intent intent = new Intent(MainActivity.this, SecondActivity.class);
-        startActivity(intent);
-    }
+//    public void LoadSecondActivity(View view){
+////        startActivity(new Intent(MainActivity.this, SecondActivity.class));
+//        Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+//        startActivity(intent);
+//    }
 
     public void LoadBonesGameActivity(View view){
         Intent intent = new Intent(MainActivity.this, BonesGameActivity.class);
